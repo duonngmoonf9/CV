@@ -220,7 +220,7 @@ const projectDetails = {
       "AI Engineering (.agents): Quy trình 3 pha chuẩn mực (Brainstorm → Plan → Execute), Domain-Driven Knowledge Base (ai-learning.md), TDD loop và bộ checklist kiểm thử bảo mật tự động."
     ],
     tech: ["NestJS", "Next.js 16", "PostgreSQL", "Drizzle ORM", "BullMQ", "Redis", "Socket.IO", "Zalo API", ".agents", "Docker"],
-    link: "G:\\2026\\new-fetch"
+    link: "Production Enterprise"
   },
   chatduon: {
     title: "DuongUy Chat - Hệ Sinh Thái Nhắn Tin Real-Time Đa Nền Tảng",
@@ -235,7 +235,7 @@ const projectDetails = {
       "AI Framework: Taste Skill & Impeccable (59 rules ngăn chặn anti-pattern trong AI frontend generation)."
     ],
     tech: ["NestJS 11", "Next.js 16", "React 19", "Capacitor", "Prisma", "Dexie IndexedDB", "Socket.IO", "Taste-Skill", "Impeccable"],
-    link: "G:\\2026\\chat-duon-guy"
+    link: "Cross-Platform Ecosystem"
   },
   nhatro: {
     title: "Nền Tảng Quản Lý Nhà Trọ & Căn Hộ Dịch Vụ Thông Minh",
@@ -249,7 +249,7 @@ const projectDetails = {
       "Communication: Tự động gửi thông báo hóa đơn, nhắc nợ qua Zalo ZNS và PWA Mobile App cho khách thuê."
     ],
     tech: ["Angular 19", "Capacitor", "Firebase", "SePAY Webhook", "Zalo ZNS API", "IoT Smart Lock", "Chart.js", ".agents"],
-    link: "G:\\2026\\nha-tro"
+    link: "Smart Living Management"
   },
   khungnhom: {
     title: "Khung Nhôm Kính - E-Commerce & Công Cụ Bóc Tách Dự Toán Tự Động",
@@ -262,7 +262,7 @@ const projectDetails = {
       "Pricing Engine: Thuật toán tự động bóc tách quy cách cây nhôm, kính cường lực, phụ kiện cơ khí và nhân công thi công chính xác 100%."
     ],
     tech: ["NestJS", "Next.js 16", "Drizzle ORM", "PostgreSQL", "TipTap", "TailwindCSS"],
-    link: "G:\\2026\\khung-nhom"
+    link: "E-Commerce Architecture"
   },
   meatdeli: {
     title: "MeatDeli - Website Doanh Nghiệp & Truy Xuất Nguồn Gốc Mã QR",
