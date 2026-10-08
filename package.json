@@ -1,0 +1,24 @@
+{
+  "name": "duong-cv",
+  "version": "1.0.0",
+  "description": "Portfolio & CV Web của Trịnh Hữu Dưỡng - Senior Full-Stack & AI Architect",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000",
+    "start": "npx -y serve . -l 3000",
+    "preview": "npx -y serve . -l 5000"
+  },
+  "keywords": [
+    "portfolio",
+    "cv",
+    "resume",
+    "developer",
+    "fullstack",
+    "ai-agent",
+    "aws",
+    "nestjs",
+    "nextjs"
+  ],
+  "author": "Trịnh Hữu Dưỡng <duongtrinh1012@gmail.com>",
+  "license": "MIT"
+}

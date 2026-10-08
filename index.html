@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trịnh Hữu Dưỡng - Senior Software Engineer | Full-Stack, Cloud & AI Architect</title>
+  <meta name="description" content="Portfolio & CV của Trịnh Hữu Dưỡng - Kỹ sư phần mềm hơn 3 năm kinh nghiệm Full-stack, AWS Cloud DevOps và tiên phong ứng dụng AI Agent (.agents) nâng cao hiệu suất phát triển phần mềm.">
+  <link rel="icon" type="image/png" href="assets/images.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              800: '#101b2e',
+              900: '#0b121e',
+              950: '#06090e'
+            },
+            emerald: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            cyan: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-obsidian-950 text-slate-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-300">
+
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo & Availability Indicator -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 p-0.5 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-all">
+          <div class="w-full h-full bg-obsidian-900 rounded-[10px] flex items-center justify-center">
+            <span class="font-mono font-bold text-base gradient-text">THD</span>
+          </div>
+        </div>
+        <div>
+          <div class="font-bold text-sm tracking-wide text-white group-hover:text-emerald-400 transition-colors">Trịnh Hữu Dưỡng</div>
+          <div class="flex items-center gap-1.5 text-[11px] text-emerald-400">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span>Available for Hire</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-1 bg-obsidian-900/80 border border-emerald-500/20 px-4 py-1.5 rounded-full backdrop-blur-md">
+        <a href="#hero" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-emerald-400 rounded-full hover:bg-emerald-500/10 transition-all">Giới thiệu</a>
+        <a href="#ai-agents" class="px-3.5 py-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300 rounded-full hover:bg-emerald-500/15 transition-all flex items-center gap-1.5">
+          <span>AI Engineering</span>
+          <span class="px-1.5 py-0.2 bg-emerald-500/20 text-emerald-300 text-[10px] rounded font-mono font-bold border border-emerald-500/30">HOT</span>
+        </a>
+        <a href="#skills" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-emerald-400 rounded-full hover:bg-emerald-500/10 transition-all">Kỹ năng</a>
+        <a href="#projects" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-emerald-400 rounded-full hover:bg-emerald-500/10 transition-all">Dự án</a>
+        <a href="#experience" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-emerald-400 rounded-full hover:bg-emerald-500/10 transition-all">Kinh nghiệm</a>
+        <a href="#contact" class="px-3.5 py-1.5 text-xs font-medium text-slate-300 hover:text-emerald-400 rounded-full hover:bg-emerald-500/10 transition-all">Liên hệ</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="openCvModal()" class="px-4 py-2 text-xs font-semibold rounded-lg bg-obsidian-900 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/10 hover:border-emerald-500/60 transition-all flex items-center gap-1.5 shadow-sm">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+          </svg>
+          <span class="hidden sm:inline">Xem CV Online</span>
+          <span class="sm:hidden">CV</span>
+        </button>
+
+        <a href="assets/CV-Trinh-Huu-Duong-VN.pdf" download="CV-Trinh-Huu-Duong-VN.pdf" class="btn-primary px-4 py-2 text-xs font-semibold rounded-lg flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          <span class="hidden sm:inline">Tải CV (PDF)</span>
+          <span class="sm:hidden">Tải PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="relative min-h-screen pt-20 sm:pt-24 lg:pt-20 lg:pb-6 pb-8 px-4 sm:px-8 flex items-center">
+    <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-12 gap-8 xl:gap-12 items-center">
+      
+      <!-- Left Column: Avatar & Floating Tech Badges (5 cols) -->
+      <div class="lg:col-span-5 flex justify-center order-2 lg:order-1 animate-on-scroll">
+        <div class="relative max-w-[280px] sm:max-w-xs lg:max-w-[320px] xl:max-w-sm w-full">
+          <!-- Ambient Glow under photo -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-cyan-500/20 rounded-3xl blur-2xl -z-10"></div>
+          
+          <div class="avatar-ring rounded-3xl overflow-hidden border-2 border-emerald-500/40 bg-obsidian-900 shadow-2xl p-1">
+            <img src="assets/1.png" alt="Trịnh Hữu Dưỡng - Software Engineer" class="w-full aspect-square object-cover rounded-[22px] transition-transform duration-500 hover:scale-105">
+          </div>
+
+          <!-- Floating Badge 1: AI Agent Workflows -->
+          <div class="absolute -top-4 -left-3 sm:-left-5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-obsidian-900/90 border border-emerald-500/40 shadow-xl backdrop-blur-md flex items-center gap-2">
+            <span class="flex h-2.5 w-2.5 sm:h-3 sm:w-3 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-emerald-500"></span>
+            </span>
+            <div>
+              <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase font-mono">Mastery</div>
+              <div class="text-[11px] sm:text-xs font-bold text-emerald-400">AI Agent Workflows (.agents)</div>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2: Cloud & Full-Stack -->
+          <div class="absolute -bottom-4 -right-3 sm:-right-5 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-obsidian-900/90 border border-cyan-500/40 shadow-xl backdrop-blur-md flex items-center gap-2.5">
+            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-[9px] sm:text-[10px] text-slate-400 uppercase font-mono">Infrastructure</div>
+              <div class="text-[11px] sm:text-xs font-bold text-cyan-400">AWS Cloud Ops & Zero-Downtime</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Headline, Bio & CTAs (7 cols) -->
+      <div class="lg:col-span-7 order-1 lg:order-2 space-y-3 lg:space-y-3.5 xl:space-y-4 animate-on-scroll hero-glass-card p-5 sm:p-6 lg:p-6 xl:p-8">
+        
+        <!-- Role Tag -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/35 text-emerald-300 text-xs font-mono font-medium backdrop-blur-md">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <span>Senior Software Engineer • Full-Stack • Cloud & AI Architect</span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-3xl sm:text-4xl lg:text-[2.5rem] xl:text-5xl font-black tracking-tight text-white leading-tight">
+          Xin chào, tôi là <br>
+          <span class="gradient-text">Trịnh Hữu Dưỡng</span>
+        </h1>
+
+        <!-- Short Subtitle: Chắt lọc ý chính từ CV -->
+        <div class="space-y-2.5 lg:space-y-3">
+          <p class="text-xs sm:text-sm lg:text-[13.5px] xl:text-[14.5px] text-slate-200 leading-relaxed font-normal">
+            Kỹ sư phần mềm <strong class="text-emerald-400 font-bold">Full-Stack (4+ năm kinh nghiệm)</strong> chuyên phát triển các ứng dụng web quy mô doanh nghiệp bằng <strong class="text-white">NestJS, Laravel, Next.js và React</strong>. Có năng lực thực thi độc lập toàn trình và trực tiếp quản trị máy chủ <strong class="text-cyan-300">Linux / AWS</strong>.
+          </p>
+
+          <!-- 3 Trụ cột ý chính chắt lọc từ ảnh 2 -->
+          <div class="grid sm:grid-cols-3 gap-2 pt-0.5 text-xs">
+            <div class="p-2.5 sm:p-3 rounded-xl frosted-box hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+              <div class="flex items-center gap-1.5 text-emerald-400 font-semibold mb-0.5 text-xs">
+                <span>☁️</span>
+                <span>Vận hành Máy chủ</span>
+              </div>
+              <p class="text-slate-400 text-[11px] leading-snug">
+                Linux & AWS EC2, thao tác dòng lệnh, mở port, Nginx/SSL, backup và nâng cấp phần cứng server.
+              </p>
+            </div>
+
+            <div class="p-2.5 sm:p-3 rounded-xl frosted-box hover:border-cyan-500/40 transition-all flex flex-col justify-between">
+              <div class="flex items-center gap-1.5 text-cyan-400 font-semibold mb-0.5 text-xs">
+                <span>⚙️</span>
+                <span>Nghiệp vụ Thực chiến</span>
+              </div>
+              <p class="text-slate-400 text-[11px] leading-snug">
+                Tư duy logic xử lý viễn thông 3CX, thanh toán VietQR, CRM Bitrix24 và thuật toán bóc tách dự toán.
+              </p>
+            </div>
+
+            <div class="p-2.5 sm:p-3 rounded-xl frosted-box hover:border-teal-500/40 transition-all flex flex-col justify-between">
+              <div class="flex items-center gap-1.5 text-teal-300 font-semibold mb-0.5 text-xs">
+                <span>🤖</span>
+                <span>Làm chủ AI Agent</span>
+              </div>
+              <p class="text-slate-400 text-[11px] leading-snug">
+                Ứng dụng AI Agent (.agents, TDD) tối ưu quy trình, đẩy nhanh tiến độ với độ chuẩn xác cao.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Info Grid (Single Row on Desktop) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-0.5">
+          <!-- Location -->
+          <div class="flex items-center gap-2 px-3 py-2 rounded-xl frosted-box text-xs text-slate-300 truncate" title="Cổ Nhuế, Bắc Từ Liêm, Hà Nội">
+            <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span class="truncate">Cổ Nhuế, Bắc Từ Liêm, HN</span>
+          </div>
+
+          <!-- Phone -->
+          <button onclick="copyToClipboard('+84916526901', 'Số điện thoại')" class="flex items-center justify-between px-3 py-2 rounded-xl frosted-box text-xs text-slate-300 hover:border-emerald-500/40 hover:text-emerald-300 transition-all text-left group">
+            <div class="flex items-center gap-1.5 truncate">
+              <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span class="font-mono text-xs truncate">(+84) 916 526 901</span>
+            </div>
+            <span class="text-[10px] text-slate-500 group-hover:text-emerald-400 font-mono shrink-0 ml-1">Copy</span>
+          </button>
+
+          <!-- Email -->
+          <button onclick="copyToClipboard('duongtrinh1012@gmail.com', 'Email')" class="flex items-center justify-between px-3 py-2 rounded-xl frosted-box text-xs text-slate-300 hover:border-emerald-500/40 hover:text-emerald-300 transition-all text-left group">
+            <div class="flex items-center gap-1.5 truncate">
+              <svg class="w-3.5 h-3.5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <span class="font-mono text-xs truncate">duongtrinh1012@gmail.com</span>
+            </div>
+            <span class="text-[10px] text-slate-500 group-hover:text-emerald-400 font-mono shrink-0 ml-1">Copy</span>
+          </button>
+        </div>
+
+        <!-- Metric Counters -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 pt-0.5">
+          <div class="p-2 sm:p-2.5 rounded-xl frosted-box border-emerald-500/25 text-center shadow-sm">
+            <div class="text-lg sm:text-xl font-black gradient-text font-mono">4+ Năm</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5">Kinh nghiệm thực chiến</div>
+          </div>
+          <div class="p-2 sm:p-2.5 rounded-xl frosted-box border-emerald-500/25 text-center shadow-sm">
+            <div class="text-lg sm:text-xl font-black text-cyan-400 font-mono">10+</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5">Dự án Production</div>
+          </div>
+          <div class="p-2 sm:p-2.5 rounded-xl frosted-box border-emerald-500/25 text-center shadow-sm">
+            <div class="text-lg sm:text-xl font-black text-emerald-400 font-mono">9.5/10</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5">Bảo vệ đồ án ĐH</div>
+          </div>
+          <div class="p-2 sm:p-2.5 rounded-xl frosted-box border-emerald-500/25 text-center shadow-sm">
+            <div class="text-lg sm:text-xl font-black text-teal-300 font-mono">100%</div>
+            <div class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5">Quy trình AI Agent</div>
+          </div>
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="flex flex-wrap gap-2.5 pt-1 sm:pt-1.5">
+          <a href="#projects" class="btn-primary px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5">
+            <span>Xem Dự Án Tiêu Biểu</span>
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </a>
+
+          <a href="#ai-agents" class="btn-secondary px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5">
+            <span class="text-emerald-400">🤖</span>
+            <span>Quy Trình AI Agent (.agents)</span>
+          </a>
+
+          <button onclick="openCvModal()" class="px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-xl bg-obsidian-950/90 backdrop-blur-md border border-slate-700 text-slate-200 hover:border-emerald-500 hover:text-emerald-300 text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            <span>Đọc Hồ Sơ CV</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AI ENGINEERING & AGENTIC WORKFLOWS ================= -->
+  <!-- Crucial Highlight Section requested by User -->
+  <section id="ai-agents" class="py-24 px-4 sm:px-8 relative bg-obsidian-900/50 border-y border-emerald-500/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll section-header-box">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold mb-4">
+          <span>🤖 KỶ NGUYÊN AI-ASSISTED DEVELOPMENT</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Làm Việc Cùng <span class="gradient-text">AI Agentic Workflows</span>
+        </h2>
+        <p class="text-slate-400 text-base mt-4 leading-relaxed">
+          Không dừng lại ở việc dùng AI để chat gợi ý code, tôi kiến trúc toàn diện <strong>Agentic Engineering Framework</strong> trực tiếp trong dự án (thực chiến tại <code class="text-emerald-400 font-mono text-xs">new-fetch/.agents</code>, <code class="text-cyan-400 font-mono text-xs">nha-tro/.agents</code>, <code class="text-teal-400 font-mono text-xs">chat-duon-guy</code>) để đảm bảo tính dự đoán cao (deterministic), loại bỏ ảo giác và nhân bội tốc độ bàn giao.
+        </p>
+      </div>
+
+      <!-- Main Agent Showcase Grid -->
+      <div class="ai-agent-box rounded-3xl p-6 sm:p-10 border border-emerald-500/30 shadow-2xl animate-on-scroll">
+        
+        <!-- Workflow Navigation Tabs -->
+        <div class="flex flex-wrap gap-2.5 mb-8 border-b border-slate-800 pb-4">
+          <button onclick="switchAiTab('framework')" data-tab="framework" class="tab-btn active px-4 py-2.5 rounded-xl border border-slate-800 bg-obsidian-900 text-xs sm:text-sm font-semibold flex items-center gap-2">
+            <span class="text-emerald-400">⚡</span>
+            <span>Master Framework 3-Pha</span>
+          </button>
+          <button onclick="switchAiTab('knowledge')" data-tab="knowledge" class="tab-btn px-4 py-2.5 rounded-xl border border-slate-800 bg-obsidian-900 text-xs sm:text-sm font-semibold flex items-center gap-2">
+            <span class="text-cyan-400">🧠</span>
+            <span>Domain Knowledge Base</span>
+          </button>
+          <button onclick="switchAiTab('tdd')" data-tab="tdd" class="tab-btn px-4 py-2.5 rounded-xl border border-slate-800 bg-obsidian-900 text-xs sm:text-sm font-semibold flex items-center gap-2">
+            <span class="text-teal-400">🧪</span>
+            <span>TDD Loop & Mocking</span>
+          </button>
+          <button onclick="switchAiTab('security')" data-tab="security" class="tab-btn px-4 py-2.5 rounded-xl border border-slate-800 bg-obsidian-900 text-xs sm:text-sm font-semibold flex items-center gap-2">
+            <span class="text-amber-400">🛡️</span>
+            <span>OWASP & Anti-Slop (Taste-Skill)</span>
+          </button>
+        </div>
+
+        <!-- Tab Content Layout: 2 Columns -->
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left: Explanation & Step Breakdown -->
+          <div class="lg:col-span-6 space-y-5">
+            <div>
+              <h3 id="ai-tab-title" class="text-xl sm:text-2xl font-bold text-white tracking-tight"></h3>
+              <p id="ai-tab-desc" class="text-sm text-slate-300 mt-2 leading-relaxed"></p>
+            </div>
+
+            <div id="ai-tab-steps" class="space-y-2.5 pt-2">
+              <!-- Dynamically populated by JS -->
+            </div>
+
+            <!-- Key Metric Box -->
+            <div class="p-4 rounded-2xl bg-gradient-to-r from-emerald-950/40 to-cyan-950/40 border border-emerald-500/20 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-emerald-300">Lợi ích thực tiễn trong công việc</div>
+                <div class="text-xs text-slate-400 mt-0.5">Rút ngắn 70% thời gian debug, 0% lỗi bảo mật cơ bản, 100% tài liệu kỹ thuật được cập nhật đồng bộ cùng mã nguồn.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Live Code / Terminal Box -->
+          <div class="lg:col-span-6">
+            <div class="code-terminal rounded-2xl overflow-hidden border border-emerald-500/30">
+              
+              <!-- Terminal Header -->
+              <div class="terminal-header px-4 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                  <span class="ml-2 font-mono text-xs text-slate-400">agent-session: ~/<span class="text-emerald-400">production</span>/.agents</span>
+                </div>
+                <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">LIVE AGENT</span>
+              </div>
+
+              <!-- Terminal Code Body -->
+              <div class="p-4 sm:p-6 bg-obsidian-950/90 font-mono text-xs sm:text-sm text-slate-300 overflow-x-auto leading-relaxed">
+                <pre id="ai-tab-code" class="text-emerald-300/90 font-mono whitespace-pre-wrap"></pre>
+              </div>
+
+              <!-- Terminal Footer Note -->
+              <div class="px-4 py-2.5 bg-obsidian-900 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between font-mono">
+                <span>Kiến trúc chuẩn hóa: Autonomous Agents Framework</span>
+                <span class="text-emerald-400">Deterministic ✔</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TECHNICAL ARSENAL (SKILLS) ================= -->
+  <section id="skills" class="py-24 px-4 sm:px-8 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll section-header-box">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold mb-4">
+          <span>🛠️ CORE COMPETENCIES</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Kho Vũ Khí <span class="gradient-text">Công Nghệ Tích Lũy</span>
+        </h2>
+        <p class="text-slate-400 text-base mt-4">
+          Hệ sinh thái công nghệ được thử lửa qua các dự án thực tế quy mô doanh nghiệp và những kiến trúc hiện đại nhất hiện nay.
+        </p>
+      </div>
+
+      <!-- Skills Grid (6 Domain Cards) -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 animate-on-scroll">
+        
+        <!-- 1. Backend & Distributed Systems -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Backend & APIs</h3>
+                <span class="text-xs text-slate-400 font-mono">Microservices & MVC</span>
+              </div>
+            </div>
+            
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Xây dựng API hiệu năng cao, cơ chế hàng đợi xử lý ngầm (Message Queues), xác thực JWT/RBAC và đồng bộ thời gian thực.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300">NestJS</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-slate-300">PHP (OOP, MVC)</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300">Laravel</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-300">BullMQ</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-red-300">Redis</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-slate-300">Socket.IO</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300">Drizzle ORM</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-300">Prisma</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-blue-300">PostgreSQL</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-blue-300">MySQL</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-green-300">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Frontend & Modern Web -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Frontend Web</h3>
+                <span class="text-xs text-slate-400 font-mono">Modern UI & State</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Giao diện người dùng mượt mà, tối ưu SEO, chuẩn SSR/SSG, quản trị state tập trung và tương tác animation sống động.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-white font-semibold">Next.js 16 (App Router)</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-300">React 19</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-red-400">Angular 19</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-blue-300">TypeScript</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-yellow-300">JavaScript (ES6+)</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-300">TailwindCSS</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300">TanStack Query v5</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-slate-300">TanStack Table v9</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-purple-300">Framer Motion</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-teal-300">Zustand</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-slate-300">Base UI & Radix</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. DevOps, Cloud & Infrastructure -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">DevOps & Cloud</h3>
+                <span class="text-xs text-slate-400 font-mono">AWS Infrastructure</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Quản trị máy chủ Linux, thiết lập AMI backup tự động, nâng cấp phần cứng không downtime, bảo trì SSL và CI/CD.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-amber-300">AWS EC2 & S3</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-amber-300">Amazon Machine Images (AMI)</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-amber-300">AWS EBS & RDS</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-slate-300">CentOS 7</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-orange-400">Ubuntu Server</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-blue-400">Docker</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300">Nginx Multi-Web</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-300">CI/CD Pipelines</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-teal-300">Zero-Downtime Migration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. AI-Driven Engineering (.agents) -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between border-emerald-500/30">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/30 to-cyan-500/30 border border-emerald-500/50 flex items-center justify-center text-emerald-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-emerald-400">AI Agent Engineering</h3>
+                <span class="text-xs text-slate-400 font-mono">Agentic Development</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Thiết lập hệ sinh thái AI trong dự án (.agents), viết skills chuẩn mực, quản lý tri thức Domain-Driven và khắc phục LLM Laziness.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300 font-bold">.agents Architecture</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-teal-300">Claude Code</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-300">OpenAI & Gemini APIs</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-slate-300">Prompt Engineering</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300">Taste Skill (Anti-Slop)</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-300">Impeccable Design</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-slate-300">TDD AI Loops</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Cross-Platform & Mobile -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Mobile & Desktop</h3>
+                <span class="text-xs text-slate-400 font-mono">Cross-Platform Hybrid</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Đóng gói và triển khai ứng dụng đa nền tảng cho Android, iOS và Desktop với cơ chế lưu trữ cục bộ Offline-first.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-blue-300">Capacitor (Android & iOS)</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-purple-300">PWA (Progressive Web App)</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-300">Electron Desktop</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300">Dexie IndexedDB (Offline-first)</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-slate-300">Capacitor Haptics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Enterprise & Third-Party Integrations -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-teal-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a2 2 0 002 2h3a1 1 0 011 1v3a2 2 0 002 2h1a2 2 0 110 4h-1a2 2 0 00-2 2v3a1 1 0 01-1 1h-3a2 2 0 00-2 2v1a2 2 0 11-4 0v-1a2 2 0 00-2-2H4a1 1 0 01-1-1v-3a2 2 0 00-2-2H1a2 2 0 110-4h1a2 2 0 002-2V7a1 1 0 011-1h3a2 2 0 002-2V4z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Enterprise Integrations</h3>
+                <span class="text-xs text-slate-400 font-mono">Telephony, CRM & Banking</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Tích hợp hệ thống tổng đài doanh nghiệp 3CX PBX, Bitrix24 CRM workflows, Webhook ngân hàng tự động và Zalo ZNS.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-blue-400">3CX PBX Integration</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-cyan-400">Bitrix24 CRM API</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-emerald-300">VietQR Automated Billing</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-teal-300">SePAY / Casso Webhooks</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-blue-300">Zalo ZNS / zca-js</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-sky-400">Telegram Bot API</span>
+              <span class="tech-badge px-2.5 py-1 rounded-lg text-xs font-mono text-amber-300">IoT Cloud Smart Lock</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FEATURED PROJECTS (Swiper Carousel) ================= -->
+  <section id="projects" class="py-24 px-4 sm:px-8 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 animate-on-scroll section-header-box">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Dự Án <span class="gradient-text">Tiêu Biểu</span>
+        </h2>
+        <p class="text-lg text-slate-400 font-mono">
+          Các dự án và thành tựu thực chiến nổi bật
+        </p>
+      </div>
+
+      <!-- Swiper Carousel Container -->
+      <div class="swiper projectsSwiper">
+        <div class="swiper-wrapper">
+
+          <!-- 1. FetchCRM -->
+          <div class="swiper-slide">
+            <div class="project-card rounded-2xl p-8 cursor-pointer" onclick="openProjectModal('fetchcrm')">
+              <div class="flex items-start justify-between mb-4">
+                <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm rounded-lg font-mono">2025 - 2026</span>
+                <svg class="w-6 h-6 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 text-white">FetchCRM System</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">
+                Hệ thống CRM và điều phối vận hành đa phân hệ doanh nghiệp. Tích hợp sâu bộ quy trình <strong>.agents 3-pha</strong>, hàng đợi tác vụ ngầm <strong>BullMQ</strong>, đồng bộ <strong>Socket.IO</strong> thời gian thực và tự động hóa qua <strong>Zalo API</strong>.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">NestJS</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Next.js 16</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Drizzle ORM</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">BullMQ</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-emerald-300 rounded-lg text-sm font-mono">.agents</span>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-800/60 flex items-center">
+                <span class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-mono transition-colors duration-200">
+                  <span>Xem Chi Tiết</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. DuongUy Chat -->
+          <div class="swiper-slide">
+            <div class="project-card rounded-2xl p-8 cursor-pointer" onclick="openProjectModal('chatduon')">
+              <div class="flex items-start justify-between mb-4">
+                <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm rounded-lg font-mono">2025 - 2026</span>
+                <svg class="w-6 h-6 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 text-white">DuongUy Chat</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">
+                Hệ sinh thái chat đa nền tảng (Web, Desktop <strong>Electron</strong>, Mobile <strong>Capacitor</strong> Android/iOS). Giao diện anti-slop áp dụng <strong>Taste Skill</strong> & Impeccable Design, lưu trữ <strong>Dexie IndexedDB</strong> offline-first.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">NestJS 11</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Next.js 16</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Capacitor</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Dexie (Offline)</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-cyan-300 rounded-lg text-sm font-mono">Taste-Skill</span>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-800/60 flex items-center">
+                <span class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-mono transition-colors duration-200">
+                  <span>Xem Chi Tiết</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Smart Living & Rental -->
+          <div class="swiper-slide">
+            <div class="project-card rounded-2xl p-8 cursor-pointer" onclick="openProjectModal('nhatro')">
+              <div class="flex items-start justify-between mb-4">
+                <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm rounded-lg font-mono">2025 - 2026</span>
+                <svg class="w-6 h-6 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 text-white">Smart Living & Rental</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">
+                Nền tảng quản lý chuỗi căn hộ, phòng trọ với 12 phân hệ quản trị. Tự động hóa gạch nợ hóa đơn qua <strong>SePAY / Casso Webhook</strong> và tích hợp điều khiển khóa thông minh <strong>IoT Cloud</strong> từ xa.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Angular 19</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Capacitor Mobile</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">SePAY Webhook</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">VietQR</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-emerald-300 rounded-lg text-sm font-mono">IoT Cloud API</span>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-800/60 flex items-center">
+                <span class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-mono transition-colors duration-200">
+                  <span>Xem Chi Tiết</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Khung Nhôm Kính -->
+          <div class="swiper-slide">
+            <div class="project-card rounded-2xl p-8 cursor-pointer" onclick="openProjectModal('khungnhom')">
+              <div class="flex items-start justify-between mb-4">
+                <span class="px-3 py-1 bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm rounded-lg font-mono">2025 - 2026</span>
+                <svg class="w-6 h-6 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 text-white">Khung Nhôm Kính E-Commerce</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">
+                Trang thương mại điện tử chuyên ngành tích hợp công cụ <strong>tính toán bóc tách dự toán kỹ thuật</strong> nhôm kính tự động theo kích thước và bài viết chuẩn SEO với <strong>TipTap Rich Editor</strong>.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">NestJS</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Next.js 16</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Drizzle ORM</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">TipTap Editor</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-cyan-300 rounded-lg text-sm font-mono">PostgreSQL</span>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-800/60 flex items-center">
+                <span class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-mono transition-colors duration-200">
+                  <span>Xem Chi Tiết</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. MeatDeli Portal (Masan Group) -->
+          <div class="swiper-slide">
+            <div class="project-card rounded-2xl p-8 cursor-pointer" onclick="openProjectModal('meatdeli')">
+              <div class="flex items-start justify-between mb-4">
+                <span class="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm rounded-lg font-mono">07/2025 - 11/2025</span>
+                <svg class="w-6 h-6 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 text-white">MeatDeli Portal</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">
+                Kiến trúc và xây dựng website thương hiệu thịt mát hàng đầu Việt Nam cho tập đoàn Masan. Phát triển CSDL động cho hệ thống <strong>truy xuất nguồn gốc kiểm dịch QR</strong> và tối ưu tỷ lệ chuyển đổi.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">PHP / Laravel</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">MySQL</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Dynamic QR</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">AWS CI/CD</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-emerald-300 rounded-lg text-sm font-mono">Masan Brand</span>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-800/60 flex items-center">
+                <span class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-mono transition-colors duration-200">
+                  <span>Xem Chi Tiết</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Cổng Nạp Tiền Tự Động 3CX QR -->
+          <div class="swiper-slide">
+            <div class="project-card rounded-2xl p-8 cursor-pointer" onclick="openProjectModal('payment3cx')">
+              <div class="flex items-start justify-between mb-4">
+                <span class="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm rounded-lg font-mono">04/2025 - 07/2025</span>
+                <svg class="w-6 h-6 text-cyan-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 text-white">Cổng Nạp Tiền 3CX QR</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">
+                Cổng thanh toán tự động qua mã <strong>VietQR</strong> nạp cước viễn thông hệ thống tổng đài 3CX. Backend <strong>Laravel RESTful APIs</strong> + JWT Auth, giao diện <strong>ReactJS</strong> và <strong>Telegram Bot</strong> thông báo xác minh realtime.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Laravel MVC</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">React.JS</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">VietQR</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">JWT & RBAC</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-sky-400 rounded-lg text-sm font-mono">Telegram Bot</span>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-800/60 flex items-center">
+                <span class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-mono transition-colors duration-200">
+                  <span>Xem Chi Tiết</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Quản Lý Dự Án & Dự Toán Doanh Nghiệp -->
+          <div class="swiper-slide">
+            <div class="project-card rounded-2xl p-8 cursor-pointer" onclick="openProjectModal('projectcost')">
+              <div class="flex items-start justify-between mb-4">
+                <span class="px-3 py-1 bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-sm rounded-lg font-mono">07/2024 - 03/2025</span>
+                <svg class="w-6 h-6 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 text-white">Quản Lý Dự Án & Dự Toán</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">
+                Số hóa quản lý dự án nội bộ doanh nghiệp: tự động hóa phân chia nhiệm vụ, <strong>bóc tách khối lượng dự toán xây dựng</strong> và tính biên lợi nhuận. Tích hợp đồng bộ 2 chiều qua <strong>Bitrix24 CRM API</strong>.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">PHP Core</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Bitrix24 API</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">jQuery Ajax</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Costing Engine</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-emerald-300 rounded-lg text-sm font-mono">Workflow</span>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-800/60 flex items-center">
+                <span class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-mono transition-colors duration-200">
+                  <span>Xem Chi Tiết</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Hiện Đại Hóa Masan Bitrix & AWS Cloud Ops -->
+          <div class="swiper-slide">
+            <div class="project-card rounded-2xl p-8 cursor-pointer" onclick="openProjectModal('masancloud')">
+              <div class="flex items-start justify-between mb-4">
+                <span class="px-3 py-1 bg-amber-500/20 border border-amber-500/30 text-amber-300 text-sm rounded-lg font-mono">06/2023 - 01/2026</span>
+                <svg class="w-6 h-6 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 text-white">Masan Bitrix & AWS Ops</h3>
+              <p class="text-slate-400 mb-4 leading-relaxed">
+                Nâng cấp toàn diện hệ thống legacy PHP 5.6 lên <strong>PHP 8.3 trên CentOS 7</strong> không downtime. Quản lý <strong>Amazon AMI backup</strong>, khôi phục sự cố, và mở rộng phân vùng lưu trữ cho tổng đài 3CX (Long Biên Golf).
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">AWS EC2 & S3</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">Amazon AMI</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">CentOS 7</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-slate-300 rounded-lg text-sm font-mono">PHP 8.3</span>
+                <span class="px-3 py-1 bg-slate-800/50 border border-slate-700/50 text-teal-300 rounded-lg text-sm font-mono">3CX Mount</span>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-800/60 flex items-center">
+                <span class="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-mono transition-colors duration-200">
+                  <span>Xem Chi Tiết</span>
+                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WORK EXPERIENCE & EDUCATION ================= -->
+  <section id="experience" class="py-24 px-4 sm:px-8 relative">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll section-header-box">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold mb-4">
+          <span>💼 CAREER PROGRESSION</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Lộ Trình <span class="gradient-text">Kinh Nghiệm & Đóng Góp</span>
+        </h2>
+        <p class="text-slate-400 text-base mt-4">
+          Quá trình công tác thực tế, các mốc thăng tiến và nền tảng học vấn vững chắc.
+        </p>
+      </div>
+
+      <!-- Experience Timeline Container -->
+      <div class="relative pl-6 sm:pl-8 border-l-2 border-emerald-500/20 space-y-12 animate-on-scroll">
+        
+        <!-- Timeline Item 1: Freelance Software Engineer (01/2026 – Hiện tại) -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-emerald-400 border-4 border-obsidian-950 timeline-dot"></div>
+          
+          <div class="glass-panel rounded-2xl p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-mono font-bold">01/2026 – Hiện tại</span>
+              <span class="text-xs text-slate-400 font-mono">Hà Nội, Việt Nam</span>
+            </div>
+            
+            <h3 class="text-xl font-bold text-white">Kỹ sư Phần mềm – Tự do (Freelance)</h3>
+            <div class="text-sm text-emerald-400 font-semibold mb-4">Hệ sinh thái các dự án công nghệ cao & AI Agentic Architecture</div>
+
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              Thiết kế kiến trúc, phát triển độc lập toàn trình và ứng dụng quy trình làm việc cùng AI Agent (.agents) vào các nền tảng thực chiến:
+            </p>
+
+            <ul class="space-y-3 text-xs text-slate-300">
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-obsidian-950/60 border border-emerald-500/15 hover:border-emerald-500/35 transition-all">
+                <span class="text-emerald-400 shrink-0 font-bold font-mono">▸ FetchCRM:</span>
+                <span>Hệ thống CRM – logistics và điều phối vận hành đa phân hệ. Tích hợp sâu bộ quy trình <strong>.agents 3-pha</strong>, BullMQ background jobs, Socket.IO realtime và Zalo API.</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-obsidian-950/60 border border-cyan-500/15 hover:border-cyan-500/35 transition-all">
+                <span class="text-cyan-400 shrink-0 font-bold font-mono">▸ DuongUy Chat:</span>
+                <span>Ứng dụng chat đa nền tảng (Web, Desktop Electron, Mobile Android/iOS qua Capacitor). Giao diện anti-slop áp dụng <strong>Taste Skill & Impeccable</strong>, IndexedDB offline-first.</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-obsidian-950/60 border border-amber-500/15 hover:border-amber-500/35 transition-all">
+                <span class="text-amber-400 shrink-0 font-bold font-mono">▸ Smart Living Portal:</span>
+                <span>Hệ thống quản lý chuỗi căn hộ, phòng trọ với 12 phân hệ quản trị, tự động gạch nợ hóa đơn qua SePAY/Casso Webhook và điều khiển khóa thông minh IoT từ xa.</span>
+              </li>
+              <li class="flex items-start gap-2.5 p-3 rounded-xl bg-obsidian-950/60 border border-teal-500/15 hover:border-teal-500/35 transition-all">
+                <span class="text-teal-400 shrink-0 font-bold font-mono">▸ Khung Nhôm Kính:</span>
+                <span>Trang thương mại điện tử chuyên ngành tích hợp thuật toán bóc tách dự toán kỹ thuật nhôm kính tự động theo kích thước và hệ thống bài viết TipTap Rich Editor.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Bitrix24 System Modernization -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 border-4 border-obsidian-950 timeline-dot"></div>
+          
+          <div class="glass-panel rounded-2xl p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-mono font-bold">12/2025 – 01/2026</span>
+              <span class="text-xs text-slate-400 font-mono">Công ty Cổ phần LET</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white">Kỹ sư Phần mềm (Vận hành & Nâng cấp Hệ thống Bitrix24)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed my-3">
+              Thực hiện các bản vá bảo mật quan trọng và cập nhật tính năng cho CRM on-premise Bitrix24. Đánh giá dung lượng phần cứng, tự động sao lưu dữ liệu bằng AWS AMI và nâng cấp hệ điều hành máy chủ CentOS di chuyển từ PHP 8.1 lên PHP 8.3 thành công.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: MeatDeli Fullstack -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-teal-400 border-4 border-obsidian-950 timeline-dot"></div>
+          
+          <div class="glass-panel rounded-2xl p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-mono font-bold">07/2025 – 11/2025</span>
+              <span class="text-xs text-slate-400 font-mono">Công ty Cổ phần LET</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white">Kỹ sư Phần mềm Full-Stack - Dự Án MeatDeli.com.vn</h3>
+            <p class="text-xs text-slate-300 leading-relaxed my-3">
+              Thiết kế kiến trúc và phát triển giao diện web hiện đại cùng landing page có tỷ lệ chuyển đổi cao cho thương hiệu MeatDeli. Cấu trúc cơ sở dữ liệu quan hệ mạnh mẽ, trang dashboard quản trị và điều phối quy trình triển khai CI/CD trên Mock & Production servers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4: 3CX Payment Gateway -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-blue-400 border-4 border-obsidian-950 timeline-dot"></div>
+          
+          <div class="glass-panel rounded-2xl p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-mono font-bold">04/2025 – 07/2025</span>
+              <span class="text-xs text-slate-400 font-mono">Công ty Cổ phần LET</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white">Kỹ sư Phần mềm Full-Stack - Cổng Thanh Toán Tự Động 3CX</h3>
+            <p class="text-xs text-slate-300 leading-relaxed my-3">
+              Xây dựng cổng nạp tiền cước gọi 3CX qua mã QR tự động. Kiến trúc Laravel MVC với RESTful APIs, xác thực JWT an toàn, giao diện ReactJS chọn số tiền nạp và tích hợp bot Telegram thông báo xác minh thanh toán theo thời gian thực.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5: Enterprise Project Management Tool -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-indigo-400 border-4 border-obsidian-950 timeline-dot"></div>
+          
+          <div class="glass-panel rounded-2xl p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 text-xs font-mono font-bold">07/2024 – 03/2025</span>
+              <span class="text-xs text-slate-400 font-mono">Công ty Cổ phần LET</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white">Kỹ sư Phần mềm - Công Cụ Quản Lý Dự Án & Dự Toán Doanh Nghiệp</h3>
+            <p class="text-xs text-slate-300 leading-relaxed my-3">
+              Xây dựng công cụ quản lý dự án cấp doanh nghiệp để tự động hóa định tuyến nhiệm vụ liên phòng ban và tính toán khối lượng xây dựng, nhân công, cùng biên lợi nhuận. Tích hợp các lời gọi API bất đồng bộ sử dụng jQuery và Ajax đồng bộ với Bitrix24 CRM.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 6: Previous Roles & Modernization -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-500 border-4 border-obsidian-950 timeline-dot"></div>
+          
+          <div class="glass-panel rounded-2xl p-6 sm:p-8">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 text-xs font-mono font-bold">11/2022 – 06/2024</span>
+              <span class="text-xs text-slate-400 font-mono">Công ty Cổ phần LET</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-white">Kỹ sư Hiện Đại Hóa & DevOps (Masan Bitrix Migration)</h3>
+            <p class="text-xs text-slate-300 leading-relaxed my-3">
+              Nâng cấp hệ sinh thái Masan Bitrix từ PHP 5.6 lên 8.0 theo từng giai đoạn; tối ưu web doanh nghiệp Masan Group (FAQ, Investor Relations, News); xây dựng landing page Invest in Vietnam, Gà Ngon Lá Chanh và quản trị server CentOS 7.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 7: Civil Engineering Foundation -->
+        <div class="relative group">
+          <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-slate-600 border-4 border-obsidian-950 timeline-dot"></div>
+          
+          <div class="glass-panel rounded-2xl p-6 sm:p-8 opacity-80">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-lg bg-slate-800 text-slate-400 border border-slate-700 text-xs font-mono">05/2020 – 01/2022</span>
+              <span class="text-xs text-slate-400 font-mono">Vinaco Việt Nam</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-200">Kỹ sư Xây dựng - Quản lý Dự Án Hạ Tầng</h3>
+            <p class="text-xs text-slate-400 leading-relaxed my-2">
+              Tham gia thi công và quản lý hạ tầng cơ sở: Nhà ăn bệnh viện Y học cổ truyền, Trường cao đẳng FPT Láng Hòa Lạc. Rèn luyện tư duy logic chặt chẽ, khả năng quản trị dự án phức tạp và tinh thần chịu trách nhiệm cao độ.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Education & Honors Section -->
+      <div class="mt-16 pt-12 border-t border-slate-800">
+        <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+          <span class="text-emerald-400">🎓</span>
+          <span>Bằng Cấp & Thành Tích Học Tập</span>
+        </h3>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          
+          <!-- Aptech Certificate -->
+          <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-emerald-500/20">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono text-emerald-400 font-semibold">03/2022 – 10/2022</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/10 text-emerald-300 border border-emerald-500/30">Chứng chỉ IT</span>
+            </div>
+            <h4 class="text-lg font-bold text-white">Chứng chỉ Aptech ITT</h4>
+            <p class="text-xs text-slate-400 mt-1">Đào tạo bài bản kiến thức lập trình chuyên sâu, lập trình hướng đối tượng OOP, cơ sở dữ liệu và phát triển ứng dụng phần mềm.</p>
+          </div>
+
+          <!-- University Degree -->
+          <div class="p-6 rounded-2xl bg-obsidian-900/80 border border-cyan-500/20">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono text-cyan-400 font-semibold">09/2015 – 03/2020</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">Cử nhân Đại Học</span>
+            </div>
+            <h4 class="text-lg font-bold text-white">Trường Đại Học Công Nghệ Giao Thông Vận Tải</h4>
+            <p class="text-xs text-slate-400 mt-1">Cử nhân Xây dựng. Bảo vệ thành công đồ án tốt nghiệp xuất sắc đạt điểm số <strong>9.5/10</strong>.</p>
+          </div>
+
+        </div>
+
+        <!-- Academic Honors Banner -->
+        <div class="mt-6 p-5 rounded-2xl bg-gradient-to-r from-emerald-950/30 via-cyan-950/20 to-obsidian-900 border border-emerald-500/20">
+          <div class="font-semibold text-xs text-emerald-300 mb-2 font-mono uppercase tracking-wider">Thành tích học tập nổi bật:</div>
+          <div class="grid sm:grid-cols-3 gap-3 text-xs text-slate-300">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400 font-bold">★</span>
+              <span>Kỳ I & II 2017: Học bổng loại Khá & Giỏi</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-cyan-400 font-bold">★</span>
+              <span>2018: Học bổng Giỏi, Giải 3 đề tài nghiên cứu</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-teal-400 font-bold">★</span>
+              <span>Kỳ I 2019: Học bổng Xuất Sắc</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & GET IN TOUCH ================= -->
+  <section id="contact" class="py-24 px-4 sm:px-8 relative bg-obsidian-900/60 border-t border-emerald-500/10">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Contact Details (6 cols) -->
+        <div class="lg:col-span-6 space-y-6 animate-on-scroll hero-glass-card p-6 sm:p-8">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold">
+            <span>📬 READY TO COLLABORATE</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Hãy Bắt Đầu Một <br>
+            <span class="gradient-text">Hành Trình Mới</span>
+          </h2>
+
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Tôi luôn sẵn sàng đón nhận những cơ hội việc làm mới ở vị trí <strong>Senior Full-Stack Engineer</strong>, <strong>Backend / DevOps Lead</strong> hoặc tham gia các dự án phát triển công nghệ đột phá ứng dụng <strong>AI Agents</strong>.
+          </p>
+
+          <!-- Contact items with quick copy -->
+          <div class="space-y-3 pt-2">
+            
+            <!-- Email -->
+            <div class="flex items-center justify-between p-4 rounded-xl frosted-box hover:border-emerald-500/40 transition-all">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[11px] text-slate-400 font-mono">Email</div>
+                  <div class="text-sm font-semibold text-white font-mono">duongtrinh1012@gmail.com</div>
+                </div>
+              </div>
+              <button onclick="copyToClipboard('duongtrinh1012@gmail.com', 'Email')" class="px-3 py-1.5 rounded-lg bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20 text-xs font-mono font-medium transition-all">Copy</button>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center justify-between p-4 rounded-xl frosted-box hover:border-emerald-500/40 transition-all">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[11px] text-slate-400 font-mono">Điện thoại / Zalo</div>
+                  <div class="text-sm font-semibold text-white font-mono">(+84) 916 526 901</div>
+                </div>
+              </div>
+              <button onclick="copyToClipboard('+84916526901', 'Số điện thoại')" class="px-3 py-1.5 rounded-lg bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 text-xs font-mono font-medium transition-all">Copy</button>
+            </div>
+
+            <!-- Location -->
+            <div class="flex items-center p-4 rounded-xl frosted-box">
+              <div class="w-10 h-10 rounded-lg bg-teal-500/10 text-teal-400 flex items-center justify-center mr-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-[11px] text-slate-400 font-mono">Địa chỉ</div>
+                <div class="text-sm font-semibold text-white">Cổ Nhuế, Bắc Từ Liêm, Hà Nội, Việt Nam</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Action Card & Downloads (6 cols) -->
+        <div class="lg:col-span-6 animate-on-scroll">
+          <div class="glass-panel rounded-3xl p-8 border-emerald-500/30 text-center relative overflow-hidden">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-tr from-emerald-500/20 to-cyan-500/20 border border-emerald-500/40 flex items-center justify-center text-3xl">
+              📄
+            </div>
+
+            <h3 class="text-2xl font-bold text-white mb-2">Hồ Sơ CV Bản Hoàn Thiện</h3>
+            <p class="text-xs text-slate-300 max-w-md mx-auto mb-6 leading-relaxed">
+              Tải về tài liệu CV chính thức định dạng PDF (Bản Tiếng Việt & Bản Tiếng Anh) sẵn sàng để gửi ứng tuyển cho Nhà Tuyển Dụng.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-3">
+              <a href="assets/CV-Trinh-Huu-Duong-VN.pdf" download="CV-Trinh-Huu-Duong-VN.pdf" class="btn-primary px-6 py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>Tải CV Tiếng Việt (PDF)</span>
+              </a>
+
+              <a href="assets/CV-Trinh-Huu-Duong-EN.pdf" download="CV-Trinh-Huu-Duong-EN.pdf" class="btn-secondary px-6 py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>Tải CV Tiếng Anh (PDF)</span>
+              </a>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-slate-800 flex justify-center items-center gap-4 text-xs text-slate-400">
+              <button onclick="openCvModal()" class="text-emerald-400 hover:underline flex items-center gap-1 font-semibold">
+                <span>👁 Xem trực tiếp trên trình duyệt</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-8 px-4 sm:px-8 border-t border-slate-900 bg-obsidian-950 text-slate-500 text-xs text-center font-mono">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 <span class="text-slate-300 font-bold">Trịnh Hữu Dưỡng</span>. All rights reserved.
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span>Full-Stack & Cloud Engineer</span>
+        <span>•</span>
+        <span class="text-emerald-400">AI Agent Architect</span>
+        <span>•</span>
+        <span>Hanoi, Vietnam</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CV PREVIEW MODAL ================= -->
+  <div id="cv-modal" class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-4xl bg-obsidian-900 border border-emerald-500/40 rounded-3xl shadow-2xl my-8 overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 bg-obsidian-950 border-b border-slate-800 flex items-center justify-between no-print">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+          <span class="font-bold text-white text-sm">Hồ Sơ Năng Lực (CV) - Trịnh Hữu Dưỡng</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-emerald-300 text-xs font-mono flex items-center gap-1">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+            <span>In / Lưu PDF</span>
+          </button>
+          <a href="assets/CV-Trinh-Huu-Duong-VN.pdf" download class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white text-xs font-mono font-semibold hover:bg-emerald-500">
+            Tải PDF
+          </a>
+          <button onclick="closeCvModal()" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Printable CV Content) -->
+      <div id="cv-modal-content" class="p-6 sm:p-10 overflow-y-auto space-y-8 bg-obsidian-900 text-slate-200">
+        
+        <!-- Header Info -->
+        <div class="border-b border-slate-800 pb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div>
+            <h1 class="text-3xl font-black text-white">TRỊNH HỮU DƯỠNG</h1>
+            <div class="text-emerald-400 font-mono text-sm font-semibold mt-1">Software Engineer (Full-Stack | Backend | DevOps | AI Architect)</div>
+            <div class="text-xs text-slate-400 mt-2 space-y-0.5">
+              <div>📍 Cổ Nhuế, Bắc Từ Liêm, Hà Nội, Việt Nam</div>
+              <div>📞 (+84) 916 526 901 | ✉️ duongtrinh1012@gmail.com</div>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <img src="assets/1.png" alt="Trịnh Hữu Dưỡng" class="w-24 h-24 rounded-2xl object-cover border-2 border-emerald-500/40 shadow-lg">
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-emerald-400 font-mono mb-2">Tóm Tắt Chuyên Môn</h2>
+          <div class="space-y-2 text-xs text-slate-300 leading-relaxed">
+            <p>
+              Kỹ sư phần mềm Full-Stack với hơn 4+ năm kinh nghiệm phát triển các ứng dụng web quy mô doanh nghiệp bằng NestJS, Laravel, Next.js và React. Có khả năng thực thi độc lập từ đầu đến cuối: lập trình hệ thống, kiểm thử và trực tiếp quản trị máy chủ Linux/AWS (thao tác dòng lệnh, mở port, cấu hình Nginx/SSL, backup và nâng cấp phần cứng server).
+            </p>
+            <p>
+              Nổi bật với tư duy logic chặt chẽ trong xử lý bài toán nghiệp vụ (viễn thông 3CX, thanh toán VietQR, CRM Bitrix24, bóc tách dự toán) và làm chủ phương pháp phát triển cùng AI Agent để đẩy nhanh tiến độ hoàn thiện sản phẩm với độ chuẩn xác cao.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skills Overview -->
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-emerald-400 font-mono mb-2">Kỹ Năng Chuyên Môn</h2>
+          <div class="space-y-2 text-xs">
+            <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+              <strong class="text-emerald-400 font-mono">Trọng tâm cốt lõi:</strong>
+              <span class="text-slate-200"> Lập trình Full-Stack, Kiến trúc Hệ thống (MVC, Modular, Microservices), Thiết kế CSDL, Server & Cloud Ops, Ứng dụng AI Agent tối ưu quy trình phát triển phần mềm</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+              <strong class="text-cyan-400 font-mono">Công nghệ & Kiến trúc:</strong>
+              <span class="text-slate-200"> Phát triển ứng dụng Web, Web Services, RESTful APIs, WebSockets (Real-time), Message Queue (Hàng đợi tác vụ ngầm), Agentic Workflows</span>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+                <strong class="text-white font-mono">Front-end:</strong>
+                <span class="text-slate-300"> TypeScript, JavaScript (ES6+), React.JS, Next.js (App Router), Angular, HTML5, CSS3, SCSS, jQuery, Ajax</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+                <strong class="text-white font-mono">Back-end:</strong>
+                <span class="text-slate-300"> NestJS (Node.js/TypeScript), PHP (OOP, MVC), Laravel framework, Kiến trúc Modular & Microservices</span>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+                <strong class="text-white font-mono">Cơ sở dữ liệu:</strong>
+                <span class="text-slate-300"> PostgreSQL, MySQL, MongoDB, Redis (Cache & Queue), Drizzle ORM, Prisma ORM, SQL tối ưu hóa truy vấn</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+                <strong class="text-white font-mono">Cơ sở hạ tầng:</strong>
+                <span class="text-slate-300"> Linux (CentOS 7, Ubuntu), AWS EC2 (vận hành, mở port, backup AMI), Docker, Nginx (Reverse Proxy, Multi-Web routing), CI/CD</span>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+                <strong class="text-white font-mono">UI & State:</strong>
+                <span class="text-slate-300"> TailwindCSS, TanStack Query (React Query v5), TanStack Table v9, Base UI, Radix UI, Framer Motion, Zustand, Ant Design, Bootstrap</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+                <strong class="text-white font-mono">Mobile & Cross-Platform:</strong>
+                <span class="text-slate-300"> Capacitor (Android & iOS), Dexie (IndexedDB Offline-first), PWA, Electron Desktop</span>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-2">
+              <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+                <strong class="text-white font-mono">Kiểm thử & Bảo mật:</strong>
+                <span class="text-slate-300"> Jest, TDD (Red-Green-Refactor), Postman API Testing, OWASP Security Hardening Checklist, Kiểm thử luồng tự động</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-obsidian-950 border border-slate-800">
+                <strong class="text-white font-mono">Công cụ & AI:</strong>
+                <span class="text-slate-300"> AI Agentic Workflows (.agents), Claude Code, OpenAI & Gemini APIs, Prompt Engineering, Git/GitHub, Bitrix24 API, 3CX PBX VoIP API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-emerald-400 font-mono mb-4">Kinh Nghiệm Làm Việc</h2>
+          
+          <div class="space-y-5 text-xs text-slate-300">
+            <div class="p-3.5 rounded-xl bg-obsidian-950/80 border border-emerald-500/25">
+              <div class="flex flex-wrap justify-between items-center font-bold text-slate-200 gap-1">
+                <span class="text-emerald-300">Kỹ sư Phần mềm – tự do (Freelance), Hà Nội</span>
+                <span class="font-mono text-emerald-400 text-xs">01/2026 – Hiện tại</span>
+              </div>
+              <div class="mt-2.5 space-y-2 text-slate-300 text-[11px] leading-relaxed">
+                <div>• <strong class="text-emerald-400">FetchCRM - Enterprise Operations:</strong> Hệ thống CRM – logistics và điều phối vận hành đa phân hệ. Tích hợp sâu bộ quy trình .agents 3-pha, BullMQ background jobs, Socket.IO realtime và Zalo API.</div>
+                <div>• <strong class="text-cyan-400">DuongUy Chat - Realtime Ecosystem:</strong> Ứng dụng chat đa nền tảng (Web, Desktop Electron, Mobile Android/iOS qua Capacitor). Giao diện anti-slop áp dụng Taste Skill & Impeccable, IndexedDB offline-first.</div>
+                <div>• <strong class="text-amber-400">Smart Living & Apartment Portal:</strong> Hệ thống quản lý chuỗi căn hộ, phòng trọ với 12 phân hệ quản trị, tự động gạch nợ hóa đơn qua SePAY/Casso Webhook và điều khiển khóa thông minh IoT từ xa.</div>
+                <div>• <strong class="text-teal-400">Khung Nhôm Kính - E-Commerce:</strong> Trang thương mại điện tử chuyên ngành tích hợp thuật toán bóc tách dự toán kỹ thuật nhôm kính tự động theo kích thước và hệ thống bài viết TipTap Rich Editor.</div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-slate-200">
+                <span>Kỹ sư Full-Stack - Dự án MeatDeli.com.vn (Masan Group)</span>
+                <span class="font-mono text-cyan-400">07/2025 – 11/2025</span>
+              </div>
+              <p class="mt-1 text-slate-400">Phát triển hệ thống truy xuất nguồn gốc kiểm dịch thịt bằng mã QR động, thiết kế lại trang chủ và dashboard quản trị, thiết lập CI/CD.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-slate-200">
+                <span>Kỹ sư Full-Stack - Cổng Thanh Toán QR Nạp Tiền 3CX</span>
+                <span class="font-mono text-teal-400">04/2025 – 07/2025</span>
+              </div>
+              <p class="mt-1 text-slate-400">Xây dựng kiến trúc Laravel MVC RESTful APIs + JWT Auth, ReactJS frontend và bot Telegram xác minh thanh toán tự động thời gian thực.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-slate-200">
+                <span>Kỹ sư Phần mềm - Công Cụ Quản Lý Dự Án & Dự Toán Doanh Nghiệp</span>
+                <span class="font-mono text-slate-400">07/2024 – 03/2025</span>
+              </div>
+              <p class="mt-1 text-slate-400">Tự động hóa định tuyến nhiệm vụ liên phòng ban, bóc tách nhân công, vật tư, biên lợi nhuận, tích hợp 2 chiều đồng bộ với Bitrix24 CRM.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between font-bold text-slate-200">
+                <span>Kỹ sư Hiện Đại Hóa Hệ Thống - Masan Bitrix PHP 5.6 -> 8.3 Migration</span>
+                <span class="font-mono text-slate-400">06/2023 – 04/2024</span>
+              </div>
+              <p class="mt-1 text-slate-400">Dẫn dắt di chuyển hệ thống Masan Bitrix qua từng giai đoạn không downtime, refactor mã nguồn cũ và cấu hình bảo mật máy chủ CentOS 7.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-emerald-400 font-mono mb-2">Học Vấn & Bằng Cấp</h2>
+          <div class="text-xs space-y-2">
+            <div class="flex justify-between">
+              <div>
+                <strong>Cử nhân Xây dựng</strong> - Trường Đại Học Công Nghệ GTVT (2015 – 2020)
+                <div class="text-slate-400">Bảo vệ thành công đồ án tốt nghiệp 9.5/10. Học bổng Khá/Giỏi/Xuất sắc các kỳ, giải 3 NCKH.</div>
+              </div>
+              <span class="font-mono text-slate-400">2015 - 2020</span>
+            </div>
+            <div class="flex justify-between">
+              <div>
+                <strong>Chứng chỉ Aptech ITT</strong> - Aptech IT Training (2022)
+                <div class="text-slate-400">Đào tạo lập trình chuyên sâu, cấu trúc dữ liệu, OOP và phát triển ứng dụng phần mềm.</div>
+              </div>
+              <span class="font-mono text-slate-400">2022</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= PROJECT DETAILS MODAL ================= -->
+  <div id="project-modal" class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-obsidian-900 border border-emerald-500/40 rounded-3xl shadow-2xl p-6 sm:p-8 my-8">
+      
+      <div class="flex items-start justify-between mb-4">
+        <div>
+          <span id="proj-modal-badge" class="px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 text-xs font-mono font-bold"></span>
+          <span id="proj-modal-time" class="ml-2 text-xs text-slate-400 font-mono"></span>
+          <h3 id="proj-modal-title" class="text-xl sm:text-2xl font-bold text-white mt-2"></h3>
+        </div>
+        <button onclick="closeProjectModal()" class="w-8 h-8 rounded-lg bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center shrink-0">✕</button>
+      </div>
+
+      <div class="space-y-4 pt-2">
+        <div>
+          <h4 class="text-xs uppercase font-mono tracking-wider text-emerald-400 mb-1">Tổng quan giải pháp:</h4>
+          <p id="proj-modal-overview" class="text-xs sm:text-sm text-slate-300 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase font-mono tracking-wider text-cyan-400 mb-2">Kiến trúc kỹ thuật & Điểm nổi bật:</h4>
+          <ul id="proj-modal-arch" class="space-y-2"></ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase font-mono tracking-wider text-slate-400 mb-2">Công nghệ sử dụng:</h4>
+          <div id="proj-modal-tech" class="flex flex-wrap gap-1.5"></div>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-800 flex justify-end">
+        <button onclick="closeProjectModal()" class="px-4 py-2 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 text-xs font-semibold">Đóng</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/three/global-particles.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/projectsCarousel.js"></script>
+</body>
+</html>
