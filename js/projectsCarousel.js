@@ -1,5 +1,5 @@
 /**
- * Projects Carousel Configuration for Trịnh Hữu Dưỡng Portfolio
+ * Projects Carousel Configuration for Trịnh Hữu Dương Portfolio
  * Matches the interactive Swiper carousel from https://thangnt.vercel.app/
  */
 

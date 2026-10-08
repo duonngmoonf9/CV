@@ -1,5 +1,5 @@
 /**
- * Global Particles Background for Trịnh Hữu Dưỡng Portfolio
+ * Global Particles Background for Trịnh Hữu Dương Portfolio
  * Full-page animated particle constellation network with Three.js
  */
 

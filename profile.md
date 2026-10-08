@@ -1,4 +1,4 @@
-# Trịnh Hữu Dưỡng (Duong Trinh)
+# Trịnh Hữu Dương (Duong Trinh)
 
 **Senior Software Engineer | Full-Stack & AI Architect**  
 📍 Hà Nội, Việt Nam | 📞 (+84) 916 526 901 | ✉️ duongtrinh1012@gmail.com  

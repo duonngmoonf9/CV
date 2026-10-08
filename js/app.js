@@ -1,5 +1,5 @@
 /**
- * Trịnh Hữu Dưỡng - Portfolio Interactive Logic
+ * Trịnh Hữu Dương - Portfolio Interactive Logic
  * Handles animations, AI workflow tabs, project filtering, CV preview modal, and toast alerts.
  */
 

@@ -1,4 +1,4 @@
-# 🌟 Trịnh Hữu Dưỡng - Portfolio & Interactive CV Web
+# 🌟 Trịnh Hữu Dương - Portfolio & Interactive CV Web
 
 > Trang web giới thiệu năng lực kỹ sư phần mềm, hệ sinh thái công nghệ tích lũy và quy trình ứng dụng **AI Agent (.agents)** đột phá trong phát triển phần mềm.
 

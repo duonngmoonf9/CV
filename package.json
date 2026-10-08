@@ -1,7 +1,7 @@
 {
   "name": "duong-cv",
   "version": "1.0.0",
-  "description": "Portfolio & CV Web của Trịnh Hữu Dưỡng - Senior Full-Stack & AI Architect",
+  "description": "Portfolio & CV Web của Trịnh Hữu Dương - Senior Full-Stack & AI Architect",
   "main": "index.html",
   "scripts": {
     "dev": "npx -y serve . -l 3000",
@@ -19,6 +19,6 @@
     "nestjs",
     "nextjs"
   ],
-  "author": "Trịnh Hữu Dưỡng <duongtrinh1012@gmail.com>",
+  "author": "Trịnh Hữu Dương <duongtrinh1012@gmail.com>",
   "license": "MIT"
 }
