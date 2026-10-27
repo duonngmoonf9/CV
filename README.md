@@ -71,8 +71,8 @@ duong-cv/
 ├── assets/
 │   ├── 1.png                         # Ảnh đại diện chính thức
 │   ├── images.png                    # Favicon chính thức của trang web
-│   ├── CV-Trinh-Huu-Duong-VN.pdf     # Bản CV PDF Tiếng Việt chính thức
-│   ├── CV-Trinh-Huu-Duong-EN.pdf     # Bản CV PDF Tiếng Anh chính thức
+│   ├── Trinh-Huu-Duong-CV-VN.pdf     # Bản CV PDF Tiếng Việt chính thức
+│   ├── Trinh-Huu-Duong-CV-EN.pdf     # Bản CV PDF Tiếng Anh chính thức
 │   └── ...                           # Icon & hình ảnh bổ trợ
 ├── css/
 │   └── styles.css                    # Toàn bộ hiệu ứng Emerald/Cyan, Glassmorphism & Print styling
