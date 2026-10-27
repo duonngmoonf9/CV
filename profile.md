@@ -7,9 +7,7 @@
 
 ## 💼 Tóm Tắt Chuyên Môn (Professional Summary)
 
-Kỹ sư phần mềm Full-Stack với hơn 4+ năm kinh nghiệm phát triển các ứng dụng web quy mô doanh nghiệp bằng **NestJS, Laravel, Next.js và React**. Có khả năng thực thi độc lập từ đầu đến cuối: lập trình hệ thống, kiểm thử và trực tiếp quản trị máy chủ **Linux/AWS** (thao tác dòng lệnh, mở port, cấu hình Nginx/SSL, backup và nâng cấp phần cứng server). 
-
-Nổi bật với tư duy logic chặt chẽ trong xử lý bài toán nghiệp vụ (viễn thông 3CX, thanh toán VietQR, CRM Bitrix24, bóc tách dự toán) và làm chủ phương pháp phát triển cùng **AI Agent (.agents, TDD)** để đẩy nhanh tiến độ hoàn thiện sản phẩm với độ chuẩn xác cao.
+Kỹ sư phần mềm Full-Stack với hơn 4+ năm kinh nghiệm phát triển các ứng dụng web quy mô doanh nghiệp bằng **NestJS, Laravel, Next.js và React**. Có khả năng thực thi độc lập từ đầu đến cuối: lập trình hệ thống, kiểm thử và trực tiếp quản trị máy chủ **Linux/AWS** (thao tác dòng lệnh, mở port, cấu hình Nginx/SSL, backup và nâng cấp phần cứng server). Nổi bật với tư duy logic chặt chẽ trong xử lý bài toán nghiệp vụ (viễn thông 3CX, thanh toán VietQR, CRM Bitrix24, bóc tách dự toán) và làm chủ phương pháp phát triển cùng **AI Agent** để đẩy nhanh tiến độ hoàn thiện sản phẩm với độ chuẩn xác cao.
 
 ---
 
